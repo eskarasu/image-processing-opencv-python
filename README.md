@@ -14,6 +14,7 @@ You can install the necessary libraries using pip:
 
 ```bash
 pip install opencv-python-headless numpy matplotlib
+```
 
 1. Extracting Pixel Values and Color Space
     - Load and display an image.
@@ -55,9 +56,9 @@ pip install opencv-python-headless numpy matplotlib
 ## Usage
 
 To run the scripts, use the following command:
-
+```bash
 python image_processing_with_opencv.py
-
+```
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 **
