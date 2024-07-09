@@ -119,10 +119,10 @@ image = cv2.imread('image.png')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Perform edge detection
-edges = cv2.Canny(gray, 50, 150, apertureSize=3)
+edges = cv2.Canny(gray, 100, 200, apertureSize=3)
 
 # Detect lines with Hough transform
-lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
+lines = cv2.HoughLines(edges, 1, np.pi / 180, 250)
 
 # Draw the detected lines on the image
 if lines is not None:
@@ -149,7 +149,7 @@ gray = cv2.medianBlur(gray, 5)
 
 # Detect circles with Hough transform
 circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, 20,
-                            param1=50, param2=30, minRadius=0, maxRadius=0)
+                            param1=60, param2=40, minRadius=10, maxRadius=50)
 
 # Draw the detected circles on the image
 if circles is not None:
