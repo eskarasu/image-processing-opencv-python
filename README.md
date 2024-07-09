@@ -33,7 +33,7 @@ pip install opencv-python-headless numpy matplotlib
 5. Blurring the Image
     - Apply a blur effect using a 5x5 kernel.
 
-6. Converting the Image to Grayscale
+6. Converting the Image to Grayscale and Detecting Edges
     - Convert the image to grayscale.
     - Detect edges using the Canny edge detection algorithm.
 
