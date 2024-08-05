@@ -199,3 +199,31 @@ ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 cv2.imshow('Thresholded Image', thresh)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+import cv2  # Import the OpenCV library for computer vision tasks
+from matplotlib import pyplot as plt  # Import Matplotlib's pyplot for plotting
+
+# Load the original image
+original_image = cv2.imread("image.png")
+
+# Get the dimensions of the image
+h, w = original_image.shape[:2]
+
+# Resize the image
+resized_image = cv2.resize(original_image, (w*2, h*2))  # Double the width and height
+
+# Display both the original and resized images
+plt.figure(figsize=(16, 8))  # Set the figure size
+
+# Display the original image
+plt.subplot(1, 3, 1)  # Position it in the first cell of a 1 row by 3 columns grid
+plt.imshow(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB))
+plt.title('Original Image')
+
+# Display the resized image in a larger subplot
+plt.subplot(1, 3, (2, 3))  # Span it across the second and third cells of the grid
+plt.imshow(cv2.cvtColor(resized_image, cv2.COLOR_BGR2RGB))
+plt.title('Resized Image - Larger View')
+
+# Start the display process
+plt.show()
